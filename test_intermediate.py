@@ -18,7 +18,7 @@ def test_account_init1(account):
     assert account.balance == 1000
     assert account.id == 1234
 
-@pytest.mark.parametrize("credit, output", [(200, 1200), (400, 1400), (800, 1900), (1980, 2980)])
+@pytest.mark.parametrize("credit, output", [(200, 1200), (400, 1400), (800, 1800), (1980, 2980)])
 def test_account_credit(account, credit, output):
     account.credit(credit)
     assert account.balance == output
@@ -37,6 +37,6 @@ def test_account_display(account):
     # Replace default stdout (terminal) with our stream
     sys.stdout = temp_out
     account.display()
-    assert temp_out.getvalue() == f"Account is under {account.name} with id {account.id} and current balance is {account.balance}\n"
+    assert temp_out.getvalue() == "Account is under {} with id {} and current balance is {}\n" .format(account.name, account.id, account.balance)
     # the original output stream to the terminal.
     sys.stdout = sys.__stdout__

@@ -12,7 +12,7 @@ def test_equality():
     assert a == 10
 
 def test_greater_than_equal():
-    a = 12
+    a = 15
     assert a >= 15    
 
 def test_wrong_input_type():
