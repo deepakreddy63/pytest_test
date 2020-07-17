@@ -1,5 +1,6 @@
 # pytest_test
 To understand and test pytest with CI
+[![Build Status](https://travis-ci.org/deepakreddy63/pytest_test.svg?branch=master)](https://travis-ci.org/github/deepakreddy63/pytest_test)
 
 ## Installation
 ### To create virtual environment 
