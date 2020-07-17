@@ -1,5 +1,9 @@
 import pytest
 import math
+import sys
+
+PY2 = sys.version_info[0] == 2
+PY3 = sys.version_info[0] == 3
 
 # To introduce pytest, fixture, markers
 # usage::
@@ -15,11 +19,12 @@ def test_greater_than_equal():
     a = 15
     assert a >= 15    
 
-def test_wrong_input_type():
-    ''' To test wrong input type error'''
-    a = "test"
-    with pytest.raises(TypeError):
-        assert a < 15   
+if PY3:
+    def test_wrong_input_type():
+        ''' To test wrong input type error'''
+        a = 'test'
+        with pytest.raises(TypeError):
+            a < 15   
 
 @pytest.fixture
 def input():

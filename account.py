@@ -11,7 +11,7 @@ class Account(object):
         self.id = cust_id
 
     def display(self):
-        print("Account is under {} with id {} and current balance is {}" .format(self.name, self.id, self.balance))
+        print(u"Account is under {} with id {} and current balance is {}" .format(self.name, self.id, self.balance))
 
     def credit(self, amount=0):
         self.balance += amount

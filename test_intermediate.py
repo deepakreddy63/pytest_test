@@ -1,6 +1,6 @@
 import pytest
 from account import Account, InsufficientBalance
-from io import StringIO 
+from six import StringIO 
 import sys
 
 # parametrize --> to test number of parameters 
